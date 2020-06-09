@@ -1,15 +1,17 @@
 ---
 title:  "Code Challenge: Tissue Contrast Illusion"
 excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
+toc: true
 ---
-In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro below ([source](https://curiositystream.com/video/1259/brightness-and-contrast)). The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
+In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro. The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
 
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
+Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and-contrast)
 
 ## Topics covered
 - making a circle with the [CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - vertically centering elements with [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- defining background colour and split-colour backgrounds ([example](https://codepen.io/mandymichael/pen/mNPvKo))
+- defining `background-colour` and split-colour backgrounds using `linear-gradient()` ([example](https://codepen.io/mandymichael/pen/mNPvKo))
 - placing a CSS image with [Lorem Picsum](https://picsum.photos/)
 - overlapping elements with [absolute positioning](https://youtu.be/P6UgYq3J3Qs)
 - controlling [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
