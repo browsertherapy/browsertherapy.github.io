@@ -3,7 +3,7 @@ title:  "Code Challenge: Tissue Contrast Illusion"
 excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
 toc: true
 ---
-## Exercise Goal
+## Exercise Goals
 In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro. The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
 
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
