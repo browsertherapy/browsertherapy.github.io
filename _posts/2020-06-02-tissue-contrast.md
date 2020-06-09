@@ -1,8 +1,8 @@
 ---
 title:  "Code Challenge: Tissue Contrast Illusion"
-excerpt: "This is the excerpt"
+excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
 ---
-In this exercise, we will replicate (as closely as possible) the Tissue Contrast Illusion as shown by Arthur Shapiro below ([source](https://curiositystream.com/video/1259/brightness-and-contrast)). The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
+In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro below ([source](https://curiositystream.com/video/1259/brightness-and-contrast)). The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
 
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
 
@@ -14,47 +14,24 @@ In this exercise, we will replicate (as closely as possible) the Tissue Contrast
 - overlapping elements with [absolute positioning](https://youtu.be/P6UgYq3J3Qs)
 - controlling [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 
-## Objectives 
-### 1. Create and position two grey circles
+## Objective 1: Create and position two grey circles
 <figure style="width: 500px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-1.png" alt="Two grey patches">
   <figcaption>Two identical grey patches, equally spaced in the centre of the viewport.</figcaption>
 </figure> 
 
-Creating **circles** using CSS has been straight forward for for awhile now. Three box model declarations ought to do it. 
+### Spoilers
 
-Surprisingly, centering elements in the viewport was pretty painful until [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) saved us around 2012 (the end of the world for float columns). The spoilers do this with only three declarations. Praise the browser deities!
-
-### 2. Add a split-colour background
-<figure style="width: 500px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-2.png" alt="Two grey patches">
-  <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
-</figure> 
-
-At first, creating a split background may seem complicated. Luckily, there is a simple way to trick a gradient into creating the desired effect.
-
-### 3. Overlap viewport with a semi-transparent image
-<figure style="width: 500px" class="align-center">
-  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-3.png" alt="Two grey patches">
-  <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
-</figure> 
-
-This is the most involved part of the illusion. [Lorem Picsum](https://picsum.photos/) is a convenient image service that simplifies things. Then, things get more involved:
-1. Will you place the image using HTML or CSS? Both are valid but the spoilers use CSS.
-2. How will you overlap this image? The classic option is absolute positioning which we use in the spoilers. Feeling fancy? Try using [explicit item placement with CSS Grid](https://youtu.be/EashgVqboWo)!
-
-## Spoilers
 <details markdown="1">
   <summary>Sample HTML</summary>
 ```html
-<main class="container bg">
+<main class="container split-bg">
   <div class="item circle"></div>
   <div class="item circle"></div>
 </main>
 <div class="image"></div>
 ```
 </details>
-
 <details markdown="1">
   <summary>Two grey circles</summary>
 
@@ -91,11 +68,18 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
 ```
 </details>
 
+## Objective 2: Add a split-colour background
+<figure style="width: 500px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-2.png" alt="Two grey patches">
+  <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
+</figure> 
+
+### Spoilers
 <details markdown="1">
-  <summary>Split-colour background</summary>
+  <summary>Add a split-colour background</summary>
 
 ```css
-.container {
+.split-bg {
   /* note: only the final `background` declaration is used; the others are included for clarity and are overridden */
 
   /* basic gradient; default gradient line direction: bottom to top (0deg)  */
@@ -109,22 +93,16 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
 }
 ```
 </details>
-<details markdown="1">
-  <summary>Overlapped image</summary>
 
-```css
-.image {
-  /* create a new block formatting context and enable `top` and `left` */
-  position: absolute;
+## Objective 3: Overlap viewport with a semi-transparent image
+<figure style="width: 500px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-3.png" alt="Two grey patches">
+  <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
+</figure> 
 
-  /* explicitly move top-left corner of image to top-left corner of <body> */
-  top: 0;
-  left: 0;
-}
-```
-</details>
+### Spoilers
 <details markdown="1">
-  <summary>Viewport-sized image</summary>
+  <summary>Add a viewport-sized image</summary>
 
 ```css
 .image {
@@ -139,8 +117,23 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
 }
 ```
 </details>
+
 <details markdown="1">
-  <summary>Semi-transparency</summary>
+  <summary>Overlap the image</summary>
+
+```css
+.image {
+  /* create a new block formatting context and enable `top` and `left` */
+  position: absolute;
+
+  /* explicitly move top-left corner of image to top-left corner of <body> */
+  top: 0;
+  left: 0;
+}
+```
+</details>
+<details markdown="1">
+  <summary>Make the image semi-transparent</summary>
 
 ```css
 .image {
@@ -149,13 +142,50 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
 }
 ```
 </details>
-<details markdown="1">
-  <summary>Final Demo</summary>
 
+## Cleaning things up
+You might see an irritating horizontal (and vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. Let's remove that.
+
+### Spoilers
+<details markdown="1">
+  <summary>Reset default browser margins</summary>
+
+```css
+body {
+  /* remove pesky scroll bars */
+  margin: 0;
+}
+```
+</details>
+
+## Mobile Considerations
+Sure, this illusion seems to work on the laptop but it doesn't look the best on mobile. Try adding a media query that declares the following when the viewport is in the portrait orientation:
+
+1. Place the circles vertically so one is above the other;
+2. Change the gradient line direction to run from top to bottom.
+
+### Spoilers
+<details markdown="1">
+  <summary>Add support for portrait orientation</summary>
+
+```css
+@media (orientation: portrait) {
+  /* Apply these styles when the screen is in 'portrait' orientation */
+  .container {
+    /* place circles in an up/down orientation */
+    flex-direction: column;
+    
+    /* change the direction of the split-colour background to match */
+    background: linear-gradient(180deg, white 50%, black 50%);
+  }
+}
+```
+</details>
+
+## Final Demo
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="funwithcodeyyc" data-slug-hash="MWKaode" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Exercise Spoilers: Tissue Contrast Illusion">
   <span>See the Pen <a href="https://codepen.io/funwithcodeyyc/pen/MWKaode">
   Exercise Spoilers: Tissue Contrast Illusion</a> by Tony Grimes (<a href="https://codepen.io/funwithcodeyyc">@funwithcodeyyc</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-</details>
