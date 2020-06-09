@@ -24,6 +24,7 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 </figure> 
 
 ### Spoilers
+{:.no_toc}
 
 <details markdown="1">
   <summary>Sample HTML</summary>
@@ -78,6 +79,8 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 </figure> 
 
 ### Spoilers
+{:.no_toc}
+
 <details markdown="1">
   <summary>Add a split-colour background</summary>
 
@@ -104,6 +107,8 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 </figure> 
 
 ### Spoilers
+{:.no_toc}
+
 <details markdown="1">
   <summary>Add a viewport-sized image</summary>
 
@@ -150,6 +155,8 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 You might see an irritating horizontal (and vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. Let's remove that.
 
 ### Spoilers
+{:.no_toc}
+
 <details markdown="1">
   <summary>Reset default browser margins</summary>
 
@@ -168,6 +175,8 @@ Sure, this illusion seems to work on the laptop but it doesn't look the best on 
 2. Change the gradient line direction to run from top to bottom.
 
 ### Spoilers
+{:.no_toc}
+
 <details markdown="1">
   <summary>Add support for portrait orientation</summary>
 
