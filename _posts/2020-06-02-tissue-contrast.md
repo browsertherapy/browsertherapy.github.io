@@ -30,7 +30,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 {:.no_toc}
 
 <details markdown="1">
-  <summary>Sample HTML</summary>
+  <summary>HTML Structure</summary>
 ```html
 <main class="container split-bg">
   <div class="item circle"></div>
@@ -49,16 +49,6 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 ### Spoiler code
 {:.no_toc}
 
-<details markdown="1">
-  <summary>Sample HTML</summary>
-```html
-<main class="container split-bg">
-  <div class="item circle"></div>
-  <div class="item circle"></div>
-</main>
-<div class="image"></div>
-```
-</details>
 <details markdown="1">
   <summary>Two grey circles</summary>
 
