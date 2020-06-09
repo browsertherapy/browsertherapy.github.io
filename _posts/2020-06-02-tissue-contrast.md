@@ -24,13 +24,7 @@ We'll break down this exercise according to how elements need to overlap:
 2. Under the circles: split-colour background
 3. On top of the circles: semi-transparent image.
 
-Most of the objectives can be solved with some clever use of the box model (with a splash of Flexbox and absolute positioning). 
-
-**Some things to consider:**
-
-- The `background` of an element always sits beneath the element's content (hence: the `<body>` background is always beneath everything on the page);
-- The source order of HTML matters with overlapped elements (using absolute positioning, for example): by default, an element will be placed *on top* of elements that precede it and *under* elements that follow it.
-- The parent-child relationship of HTML elements greatly affect how Flexbox does its magic (which we're using for the centered circles).
+Most of the objectives can be solved with some clever use of backgrounds with a splash of Flexbox and absolute positioning. 
 
 ### Sample code
 {:.no_toc}
@@ -52,7 +46,7 @@ Most of the objectives can be solved with some clever use of the box model (with
   <figcaption>Two identical grey patches, equally spaced in the centre of the viewport.</figcaption>
 </figure> 
 
-### Sample code
+### Spoiler code
 {:.no_toc}
 
 <details markdown="1">
@@ -107,7 +101,7 @@ Most of the objectives can be solved with some clever use of the box model (with
   <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
 </figure> 
 
-### Sample code
+### Spoiler code
 {:.no_toc}
 
 <details markdown="1">
@@ -136,7 +130,7 @@ Most of the objectives can be solved with some clever use of the box model (with
   <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
 </figure> 
 
-### Sample code
+### Spoiler code
 {:.no_toc}
 
 <details markdown="1">
@@ -184,7 +178,7 @@ Most of the objectives can be solved with some clever use of the box model (with
 ## Cleaning things up
 You might see an irritating horizontal (and vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. Let's remove that.
 
-### Sample code
+### Spoiler code
 {:.no_toc}
 
 <details markdown="1">
