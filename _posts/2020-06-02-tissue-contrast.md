@@ -18,7 +18,7 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 - controlling [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 
 ## Planning it out
-The first step in solving any problem is to break it down into smaller problems. We'll break down this exercise according to how elements need to overlap:
+We'll break down this exercise according to how elements need to overlap:
 
 1. Two identical grey circles
 2. Under the circles: split-colour background
@@ -32,7 +32,19 @@ Most of the objectives can be solved with some clever use of the box model (with
 - The source order of HTML matters with overlapped elements (using absolute positioning, for example): by default, an element will be placed *on top* of elements that precede it and *under* elements that follow it.
 - The parent-child relationship of HTML elements greatly affect how Flexbox does its magic (which we're using for the centered circles).
 
-Further hints and answer code are provided below.
+### Sample code
+{:.no_toc}
+
+<details markdown="1">
+  <summary>Sample HTML</summary>
+```html
+<main class="container split-bg">
+  <div class="item circle"></div>
+  <div class="item circle"></div>
+</main>
+<div class="image"></div>
+```
+</details>
 
 ## Objective 1: Create and position two grey circles
 <figure style="width: 500px" class="align-center">
