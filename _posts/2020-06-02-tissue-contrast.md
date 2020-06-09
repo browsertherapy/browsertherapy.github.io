@@ -17,13 +17,30 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 - overlapping elements with [absolute positioning](https://youtu.be/P6UgYq3J3Qs)
 - controlling [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
 
+## Planning it out
+The first step in solving any problem is to break it down into smaller problems. We'll break down this exercise according to how elements need to overlap:
+
+1. Two identical grey circles
+2. Under the circles: split-colour background
+3. On top of the circles: semi-transparent image.
+
+Most of the objectives can be solved with some clever use of the box model (with a splash of Flexbox and absolute positioning). 
+
+**Some things to consider:**
+
+- The `background` of an element always sits beneath the element's content (hence: the `<body>` background is always beneath everything on the page);
+- The source order of HTML matters with overlapped elements (using absolute positioning, for example): by default, an element will be placed *on top* of elements that precede it and *under* elements that follow it.
+- The parent-child relationship of HTML elements greatly affect how Flexbox does its magic (which we're using for the centered circles).
+
+Further hints and answer code are provided below.
+
 ## Objective 1: Create and position two grey circles
 <figure style="width: 500px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-1.png" alt="Two grey patches">
   <figcaption>Two identical grey patches, equally spaced in the centre of the viewport.</figcaption>
 </figure> 
 
-### Spoilers
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -78,7 +95,7 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
   <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
 </figure> 
 
-### Spoilers
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -86,7 +103,8 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 
 ```css
 .split-bg {
-  /* note: only the final `background` declaration is used; the others are included for clarity and are overridden */
+  /* note: the final `background` declaration overrides the others,
+  which are included for clarity but can safely be ignored */
 
   /* basic gradient; default gradient line direction: bottom to top (0deg)  */
   background: linear-gradient(white, black);
@@ -106,7 +124,7 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
   <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
 </figure> 
 
-### Spoilers
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -154,7 +172,7 @@ Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and
 ## Cleaning things up
 You might see an irritating horizontal (and vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. Let's remove that.
 
-### Spoilers
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -174,7 +192,7 @@ Sure, this illusion seems to work on the laptop but it doesn't look the best on 
 1. Place the circles vertically so one is above the other;
 2. Change the gradient line direction to run from top to bottom.
 
-### Spoilers
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
