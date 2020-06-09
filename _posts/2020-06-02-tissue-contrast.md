@@ -1,17 +1,47 @@
 ---
-title:  "Coding Challenge: Tissue Contrast Illusion"
+title:  "Code Challenge: Tissue Contrast Illusion"
 excerpt: "This is the excerpt"
 ---
-## Exploring the Tissue Contrast Illusion
+In this exercise, we will replicate (as closely as possible) the Tissue Contrast Illusion as shown by Arthur Shapiro below ([source](https://curiositystream.com/video/1259/brightness-and-contrast)). The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
+
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
 
-## Relevant Resources
-### Cheatsheets
-- Box Model
-- Display Modes
-- CSS images
-- Flexbox
-- Positioning
+## Topics covered
+- making a circle with the [CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- vertically centering elements with [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- defining background colour and split-colour backgrounds ([example](https://codepen.io/mandymichael/pen/mNPvKo))
+- placing a CSS image with [Lorem Picsum](https://picsum.photos/)
+- overlapping elements with [absolute positioning](https://youtu.be/P6UgYq3J3Qs)
+- controlling [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+
+## Objectives 
+### 1. Create and position two grey circles
+<figure style="width: 500px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-1.png" alt="Two grey patches">
+  <figcaption>Two identical grey patches, equally spaced in the centre of the viewport.</figcaption>
+</figure> 
+
+Creating **circles** using CSS has been straight forward for for awhile now. Three box model declarations ought to do it. 
+
+Surprisingly, centering elements in the viewport was pretty painful until [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) saved us around 2012 (the end of the world for float columns). The spoilers do this with only three declarations. Praise the browser deities!
+
+### 2. Add a split-colour background
+<figure style="width: 500px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-2.png" alt="Two grey patches">
+  <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
+</figure> 
+
+At first, creating a split background may seem complicated. Luckily, there is a simple way to trick a gradient into creating the desired effect.
+
+### 3. Overlap viewport with a semi-transparent image
+<figure style="width: 500px" class="align-center">
+  <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-3.png" alt="Two grey patches">
+  <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
+</figure> 
+
+This is the most involved part of the illusion. [Lorem Picsum](https://picsum.photos/) is a convenient image service that simplifies things. Then, things get more involved:
+1. Will you place the image using HTML or CSS? Both are valid but the spoilers use CSS.
+2. How will you overlap this image? The classic option is absolute positioning which we use in the spoilers. Feeling fancy? Try using [explicit item placement with CSS Grid](https://youtu.be/EashgVqboWo)!
 
 ## Spoilers
 ### Sample HTML
@@ -54,10 +84,9 @@ excerpt: "This is the excerpt"
 ```
 
 ### Split-colour background
-
 ```css
 .container {
-  /* note: only the final `background` declaration is used; the others are included for clarity */
+  /* note: only the final `background` declaration is used; the others are included for clarity and are overridden */
 
   /* basic gradient; default gradient line direction: bottom to top (0deg)  */
   background: linear-gradient(white, black);
@@ -91,7 +120,7 @@ excerpt: "This is the excerpt"
   
   /* add full-size, centered background image to element */
   background-image: url('https://picsum.photos/500/500');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 }
 ```
