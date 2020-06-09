@@ -44,7 +44,8 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
 2. How will you overlap this image? The classic option is absolute positioning which we use in the spoilers. Feeling fancy? Try using [explicit item placement with CSS Grid](https://youtu.be/EashgVqboWo)!
 
 ## Spoilers
-### Sample HTML
+<details markdown="1">
+  <summary>Sample HTML</summary>
 ```html
 <main class="container bg">
   <div class="item circle"></div>
@@ -52,8 +53,11 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
 </main>
 <div class="image"></div>
 ```
+</details>
 
-### Two grey circles
+<details markdown="1">
+  <summary>Two grey circles</summary>
+
 ```css
 .circle {
   /* make it visible */
@@ -67,7 +71,10 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
   border-radius: 50%;
 }
 ```
-### Equally spaced flex items, centred in the viewport
+</details>
+<details markdown="1">
+  <summary>Equally spaced flex items, centred in the viewport</summary>
+
 ```css
 .container {
   /* change default behaviour of `margin: auto` below */
@@ -82,8 +89,11 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
   margin: auto;
 }
 ```
+</details>
 
-### Split-colour background
+<details markdown="1">
+  <summary>Split-colour background</summary>
+
 ```css
 .container {
   /* note: only the final `background` declaration is used; the others are included for clarity and are overridden */
@@ -98,8 +108,10 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
   background: linear-gradient(90deg, white 50%, black 50%);
 }
 ```
+</details>
+<details markdown="1">
+  <summary>Overlapped image</summary>
 
-### Overlapped image
 ```css
 .image {
   /* create a new block formatting context and enable `top` and `left` */
@@ -110,8 +122,10 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
   left: 0;
 }
 ```
+</details>
+<details markdown="1">
+  <summary>Viewport-sized image</summary>
 
-### Viewport-sized image
 ```css
 .image {
   /* explicitly set element size to viewport */
@@ -124,11 +138,24 @@ This is the most involved part of the illusion. [Lorem Picsum](https://picsum.ph
   background-position: center;
 }
 ```
+</details>
+<details markdown="1">
+  <summary>Semi-transparency</summary>
 
-### Semi-transparency
 ```css
 .image {
   /* set element opacity to 50% */
   opacity: 0.5;
 }
 ```
+</details>
+<details markdown="1">
+  <summary>Final Demo</summary>
+
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="funwithcodeyyc" data-slug-hash="MWKaode" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Exercise Spoilers: Tissue Contrast Illusion">
+  <span>See the Pen <a href="https://codepen.io/funwithcodeyyc/pen/MWKaode">
+  Exercise Spoilers: Tissue Contrast Illusion</a> by Tony Grimes (<a href="https://codepen.io/funwithcodeyyc">@funwithcodeyyc</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</details>
