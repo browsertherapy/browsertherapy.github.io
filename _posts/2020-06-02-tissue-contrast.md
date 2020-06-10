@@ -3,7 +3,7 @@ title:  "Code Challenge: Tissue Contrast Illusion"
 excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
 toc: true
 ---
-## Exercise Goals
+## Overview
 In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro. The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
 
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
@@ -65,6 +65,10 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   border-radius: 50%;
 }
 ```
+
+**New to Viewport Units?** Checkout this excellent video by Jen Simmons: [Introduction to Viewport Units](https://youtu.be/_sgF8I-Q1Gs)
+{:.notice--info}
+
 </details>
 <details markdown="1">
   <summary>Equally spaced flex items, centred in the viewport</summary>
@@ -83,6 +87,9 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   margin: auto;
 }
 ```
+
+**Pro tip**: Planning on using Flexbox more? Don't memorize anything; have the [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) open in another tab.
+{:.notice--info}
 </details>
 
 ## Objective 2: Add a split-colour background
@@ -188,7 +195,7 @@ Sure, this illusion seems to work on the laptop but it doesn't look the best on 
 1. Place the circles vertically so one is above the other;
 2. Change the gradient line direction to run from top to bottom.
 
-### Sample code
+### Spoiler code
 {:.no_toc}
 
 <details markdown="1">
