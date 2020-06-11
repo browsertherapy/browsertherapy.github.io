@@ -46,7 +46,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   <figcaption>Two identical grey patches, equally spaced in the centre of the viewport.</figcaption>
 </figure> 
 
-### Spoiler code
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -54,19 +54,22 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 
 ```css
 .circle {
-  /* make it visible */
-  background: grey;
-
   /* make it square */
   width: 30vmin;
   height: 30vmin;
+
+  /* make it visible */
+  background: grey;
 
   /* make it circular */
   border-radius: 50%;
 }
 ```
 
-**New to Viewport Units?** Checkout this excellent video by Jen Simmons: [Introduction to Viewport Units](https://youtu.be/_sgF8I-Q1Gs)
+**Video**: New to Viewport units? Check out this excellent summary by Jen Simmons: [Introduction to Viewport Units](https://youtu.be/_sgF8I-Q1Gs){:target="_blank"}.
+{:.notice--info}
+
+**Pro tip**: Viewport units are amazing for global layout but try `em/rem` units for smaller layouts such as [cards](https://www.google.com/search?q=ux+card+pattern){:target="_blank"}).
 {:.notice--info}
 
 </details>
@@ -83,12 +86,12 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 }
 
 .item {
-  /* equally distribute left over margin among flex items */
+  /* equally distribute extra horizontal/vertical space among flex items; block elements only do this for `margin-left` and `margin-right` */
   margin: auto;
 }
 ```
 
-**Pro tip**: Planning on using Flexbox more? Don't memorize anything; have the [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) open in another tab.
+**Pro tip**: Going to use more Flexbox? Have the [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"} open in another tab. It has pictures!
 {:.notice--info}
 </details>
 
@@ -98,7 +101,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
 </figure> 
 
-### Spoiler code
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -119,6 +122,9 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   background: linear-gradient(90deg, white 50%, black 50%);
 }
 ```
+
+**Article**: Everything you ever wanted to know about [CSS Gradients](https://css-tricks.com/css3-gradients/){:target="_blank"}.
+{:.notice--info}
 </details>
 
 ## Objective 3: Overlap viewport with a semi-transparent image
@@ -127,7 +133,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
 </figure> 
 
-### Spoiler code
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -145,6 +151,9 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   background-position: center;
 }
 ```
+
+**Alternate Solution**: Another valid option is to use an HTML image using an `img` element with the `object-fit` property.
+{:.notice--info}
 </details>
 
 <details markdown="1">
@@ -160,6 +169,10 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   left: 0;
 }
 ```
+
+**Extra Points**: Absolute positioning is the classic method. Step into the future: [explicit item placement with CSS Grid](https://youtu.be/EashgVqboWo){:target="_blank"}
+{:.notice--info}
+
 </details>
 <details markdown="1">
   <summary>Make the image semi-transparent</summary>
@@ -170,16 +183,19 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   opacity: 0.5;
 }
 ```
+**More Transparency**: `opacity` isn't the only way to create transparency in CSS. Gradients accept `transparent` as a colour keyword and you can add an alpha channel to `rgb()` or `hsl()` when defining colour.
+{:.notice--info}
+
 </details>
 
 ## Cleaning things up
 You might see an irritating horizontal (and vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. Let's remove that.
 
-### Spoiler code
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
-  <summary>Reset default browser margins</summary>
+  <summary>Reset default margins</summary>
 
 ```css
 body {
@@ -188,14 +204,24 @@ body {
 }
 ```
 </details>
-
+<details markdown="1">
+  <summary>Reset default `box-sizing`</summary>
+```css
+* {
+  /* make element width calculations a little more intuitive */
+  box-sizing: border-box;
+}
+```
+**Optional**: `box-sizing` doesn't apply to the sample code as written but elements with `padding` might benefit from this handy reset.
+{:.notice--info}
+</details>
 ## Mobile Considerations
 Sure, this illusion seems to work on the laptop but it doesn't look the best on mobile. Try adding a media query that declares the following when the viewport is in the portrait orientation:
 
 1. Place the circles vertically so one is above the other;
 2. Change the gradient line direction to run from top to bottom.
 
-### Spoiler code
+### Sample code
 {:.no_toc}
 
 <details markdown="1">
@@ -208,11 +234,13 @@ Sure, this illusion seems to work on the laptop but it doesn't look the best on 
     /* place circles in an up/down orientation */
     flex-direction: column;
     
-    /* change the direction of the split-colour background to match */
+    /* change the direction of the split-colour background to match the new direction */
     background: linear-gradient(180deg, white 50%, black 50%);
   }
 }
 ```
+**One nail, two hammers**: It turns out that using `display: grid` instead of `flex-direction: column` produces the same results. Why? 'cuz CSS.
+{:.notice--info}
 </details>
 
 ## Final Demo
