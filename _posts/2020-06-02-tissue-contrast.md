@@ -1,5 +1,5 @@
 ---
-title:  "Code Challenge: Tissue Contrast Illusion"
+title:  "Coding Challenge: Tissue Contrast Illusion"
 excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
 toc: true
 ---
@@ -183,7 +183,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
   opacity: 0.5;
 }
 ```
-**More Transparency**: `opacity` isn't the only way to create transparency in CSS. Gradients accept `transparent` as a colour keyword and you can add an alpha channel to `rgb()` or `hsl()` when defining colour.
+**More Transparency**: `opacity` isn't the only way to create transparency in CSS. Gradients accept `transparent` as a colour keyword and you can add an alpha channel to `rgb()` or `hsl()` when defining a colour.
 {:.notice--info}
 
 </details>
