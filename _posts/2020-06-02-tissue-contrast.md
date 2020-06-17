@@ -6,16 +6,16 @@ categories: Challenges
 tags: featured
 ---
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
-Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and-contrast)
+Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and-contrast){:target="_blank"}
 
 ## Overview
 The goal of this exercise is to replicate the Tissue Contrast Illusion in the browser. We've broken the problem into logical steps and provided (hidden) sample code if you get stuck. *But*, keep in mind there are many (and possibly better) ways to solve this problem.
 
 ## Prerequisites
-This activity should be approachable for beginners but some understanding of the following technologies will be beneficial: [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) and the [CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+This activity should be approachable for beginners but some understanding of the following technologies will be beneficial: [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics){:target="_blank"}, [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics){:target="_blank"} and the [CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model){:target="_blank"}.
 
 ## Topics covered
-The sample code (below) further incorporates the following concepts and technologies: [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), [viewport units](https://www.youtube.com/watch?v=_sgF8I-Q1Gs), [linear gradients](https://css-tricks.com/css3-gradients/), [transparent](https://css-tricks.com/almanac/properties/o/opacity/) [images](https://www.youtube.com/watch?v=33IinMVJf-M) and [absolute positioning](https://youtu.be/P6UgYq3J3Qs).
+The sample code (below) further incorporates the following concepts and technologies: [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"}, [viewport units](https://www.youtube.com/watch?v=_sgF8I-Q1Gs){:target="_blank"}, [linear gradients](https://css-tricks.com/css3-gradients/){:target="_blank"}, [transparent](https://css-tricks.com/almanac/properties/o/opacity/){:target="_blank"} [images](https://www.youtube.com/watch?v=33IinMVJf-M){:target="_blank"} and [absolute positioning](https://youtu.be/P6UgYq3J3Qs){:target="_blank"}.
 
 ## Planning it out
 Let's break down this exercise according to how elements need to overlap:
@@ -68,7 +68,7 @@ These objectives are further broken down below. Remember: sample code is provide
 }
 ```
 
-**Video**: New to Viewport units? Check out this excellent summary by Jen Simmons: [Introduction to Viewport Units](https://youtu.be/_sgF8I-Q1Gs){:target="_blank"}.
+**Coming from print?**: Check out this excellent video by Jen Simmons: [Designing for a Viewport](https://www.youtube.com/watch?v=QY3lTBZnJmE){:target="_blank"}.
 {:.notice--info}
 
 **Pro tip**: Viewport units are amazing for global layout but try `em/rem` units for smaller page elements such as [cards](https://www.google.com/search?q=ux+card+pattern){:target="_blank"}).
@@ -96,7 +96,7 @@ These objectives are further broken down below. Remember: sample code is provide
 **Getting fancy**: Check out the [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"} for more ways to control your items with properties like `justify-content` and `align-items`.
 {:.notice--info}
 
-**Pro tip**: Flexbox is very handy for laying out [navigation menus](https://www.google.com/search?q=flexbox+navbar), [hero sections](https://www.google.com/search?q=flexbox+hero+sections) and [cards](https://www.google.com/search?q=flexbox+cards).
+**Pro tip**: Flexbox is very handy for laying out [navigation menus](https://www.google.com/search?q=flexbox+navbar){:target="_blank"}, [hero sections](https://www.google.com/search?q=flexbox+hero+sections){:target="_blank"} and [cards](https://www.google.com/search?q=flexbox+cards){:target="_blank"}.
 {:.notice--info}
 </details>
 
@@ -248,7 +248,7 @@ Sure, this illusion seems to work on the laptop but what if you want to text you
   }
 }
 ```
-**One nail, two hammers**: It turns out that using `display: grid` instead of `flex-direction: column` produces the same results. Why? Because CSS.
+**One nail, two hammers**: Using `display: grid` instead of `flex-direction: column` produces the same results. Why? Because CSS.
 {:.notice--info}
 </details>
 

@@ -1,5 +1,5 @@
 # Browser Therapy
-Browser Therapy's goal is to represent the browser as a medium of self-expression.
+Browser Therapy's goal is to present the browser as a medium of self-expression.
 
 ## License
 Copyright 2020 Tony Grimes and contributors
