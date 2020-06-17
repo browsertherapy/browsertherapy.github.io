@@ -1,6 +1,6 @@
 ---
 title:  "Coding Challenge: Tissue Contrast Illusion"
-excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
+excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion by Arthur Shapiro."
 toc: true
 categories: Challenges
 tags: featured
@@ -103,7 +103,7 @@ These objectives are further broken down below. Remember: sample code is provide
 ## Objective 2: Add a split-colour background
 <figure style="width: 500px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-2.png" alt="Two grey patches">
-  <figcaption>Two identical grey patches on a split-colour background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
+  <figcaption>Two identical grey patches on a split-colour (very light and very dark) background. Notice the left circle appears slightly darker than the one on the right.</figcaption>
 </figure> 
 
 ### Sample code
@@ -221,7 +221,7 @@ body {
   box-sizing: border-box;
 }
 ```
-**Optional**: `box-sizing` doesn't apply to the sample code as written but elements with added `padding` and 'border' might benefit from this handy reset.
+**Optional**: `box-sizing` doesn't apply to the sample code as written but elements with added `padding` and `border` might benefit from this handy reset.
 {:.notice--info}
 </details>
 ## Mobile Considerations
@@ -248,11 +248,13 @@ Sure, this illusion seems to work on the laptop but what if you want to text you
   }
 }
 ```
-**One nail, two hammers**: It turns out that using `display: grid` instead of `flex-direction: column` produces the same results. Why? 'cuz CSS.
+**One nail, two hammers**: It turns out that using `display: grid` instead of `flex-direction: column` produces the same results. Why? Because CSS.
 {:.notice--info}
 </details>
 
 ## Final Demo
+
+
 <p class="codepen" data-height="265" data-theme-id="light" data-default-tab="result" data-user="funwithcodeyyc" data-slug-hash="MWKaode" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Exercise Spoilers: Tissue Contrast Illusion">
   <span>See the Pen <a href="https://codepen.io/funwithcodeyyc/pen/MWKaode">
   Exercise Spoilers: Tissue Contrast Illusion</a> by Tony Grimes (<a href="https://codepen.io/funwithcodeyyc">@funwithcodeyyc</a>)
