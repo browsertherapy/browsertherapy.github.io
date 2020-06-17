@@ -2,29 +2,29 @@
 title:  "Coding Challenge: Tissue Contrast Illusion"
 excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro."
 toc: true
+categories: Challenges
+tags: featured
 ---
-## Overview
-In this exercise, we will replicate the Tissue Contrast Illusion as shown by Arthur Shapiro. The images in the spoiler code use the [Lorem Picsum](https://picsum.photos/) image service (they're awesome!) to respect copyright 'n stuff.
-
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
 Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and-contrast)
 
+## Overview
+The goal of this exercise is to replicate the Tissue Contrast Illusion in the browser. We've broken the problem into logical steps and provided (hidden) sample code if you get stuck. *But*, keep in mind there are many (and possibly better) ways to solve this problem.
+
+## Prerequisites
+This activity should be approachable for beginners but some understanding of the following technologies will be beneficial: [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics), [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) and the [CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+
 ## Topics covered
-- making a circle with the [CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- vertically centering elements with [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- defining `background-colour` and split-colour backgrounds using `linear-gradient()` ([example](https://codepen.io/mandymichael/pen/mNPvKo))
-- placing a CSS image with [Lorem Picsum](https://picsum.photos/)
-- overlapping elements with [absolute positioning](https://youtu.be/P6UgYq3J3Qs)
-- controlling [opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+The sample code (below) further incorporates the following concepts and technologies: [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), [viewport units](https://www.youtube.com/watch?v=_sgF8I-Q1Gs), [linear gradients](https://css-tricks.com/css3-gradients/), [transparent](https://css-tricks.com/almanac/properties/o/opacity/) [images](https://www.youtube.com/watch?v=33IinMVJf-M) and [absolute positioning](https://youtu.be/P6UgYq3J3Qs).
 
 ## Planning it out
-We'll break down this exercise according to how elements need to overlap:
+Let's break down this exercise according to how elements need to overlap:
 
 1. Two identical grey circles
-2. Under the circles: split-colour background
-3. On top of the circles: semi-transparent image.
+2. **Under the circles**: split-colour background
+3. **On top of the circles**: semi-transparent image.
 
-Most of the objectives can be solved with some clever use of backgrounds with a splash of Flexbox and absolute positioning. 
+These objectives are further broken down below. Remember: sample code is provided in case you get stuck but there are many ways to achieve the desired results.
 
 ### Sample code
 {:.no_toc}
@@ -32,10 +32,12 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 <details markdown="1">
   <summary>HTML Structure</summary>
 ```html
+<!-- The parent-child relationship of the `container` and `item`s is crucial to how Flexbox operates later. -->
 <main class="container split-bg">
   <div class="item circle"></div>
   <div class="item circle"></div>
 </main>
+<!-- Placed at the end so that it sits on top when positioned later. -->
 <div class="image"></div>
 ```
 </details>
@@ -43,7 +45,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 ## Objective 1: Create and position two grey circles
 <figure style="width: 500px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-1.png" alt="Two grey patches">
-  <figcaption>Two identical grey patches, equally spaced in the centre of the viewport.</figcaption>
+  <figcaption>Two identical grey (50% black) patches, each centered in their half of the viewport (i.e. the viewable portion of a web page).</figcaption>
 </figure> 
 
 ### Sample code
@@ -69,12 +71,12 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 **Video**: New to Viewport units? Check out this excellent summary by Jen Simmons: [Introduction to Viewport Units](https://youtu.be/_sgF8I-Q1Gs){:target="_blank"}.
 {:.notice--info}
 
-**Pro tip**: Viewport units are amazing for global layout but try `em/rem` units for smaller layouts such as [cards](https://www.google.com/search?q=ux+card+pattern){:target="_blank"}).
+**Pro tip**: Viewport units are amazing for global layout but try `em/rem` units for smaller page elements such as [cards](https://www.google.com/search?q=ux+card+pattern){:target="_blank"}).
 {:.notice--info}
 
 </details>
 <details markdown="1">
-  <summary>Equally spaced flex items, centred in the viewport</summary>
+  <summary>Each circle, centred in their half of the viewport</summary>
 
 ```css
 .container {
@@ -91,7 +93,10 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 }
 ```
 
-**Pro tip**: Going to use more Flexbox? Have the [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"} open in another tab. It has pictures!
+**Getting fancy**: Check out the [Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"} for more ways to control your items with properties like `justify-content` and `align-items`.
+{:.notice--info}
+
+**Pro tip**: Flexbox is very handy for laying out [navigation menus](https://www.google.com/search?q=flexbox+navbar), [hero sections](https://www.google.com/search?q=flexbox+hero+sections) and [cards](https://www.google.com/search?q=flexbox+cards).
 {:.notice--info}
 </details>
 
@@ -123,7 +128,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 }
 ```
 
-**Article**: Everything you ever wanted to know about [CSS Gradients](https://css-tricks.com/css3-gradients/){:target="_blank"}.
+**Creative text effects**: [Mandy Michael](https://www.youtube.com/watch?v=lKRdfw4xcGo){:target="_blank"} uses this gradient technique in many of [her](https://codepen.io/mandymichael/pen/mNPvKo){:target="_blank"} [amazing](https://codepen.io/mandymichael/pen/MpqJMa){:target="_blank"} [designs](https://codepen.io/mandymichael/pen/peZgxW){:target="_blank"}.
 {:.notice--info}
 </details>
 
@@ -137,7 +142,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 {:.no_toc}
 
 <details markdown="1">
-  <summary>Add a viewport-sized image</summary>
+  <summary>Add a viewport-sized CSS image</summary>
 
 ```css
 .image {
@@ -170,7 +175,7 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 }
 ```
 
-**Extra Points**: Absolute positioning is the classic method. Step into the future: [explicit item placement with CSS Grid](https://youtu.be/EashgVqboWo){:target="_blank"}
+**Extra Points**: Absolute positioning is the classic method. Try using a newer technique: [explicit item placement with CSS Grid](https://youtu.be/EashgVqboWo){:target="_blank"}. Each have their advantages depending on your situation.
 {:.notice--info}
 
 </details>
@@ -188,8 +193,12 @@ Most of the objectives can be solved with some clever use of backgrounds with a 
 
 </details>
 
-## Cleaning things up
-You might see an irritating horizontal (and vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. Let's remove that.
+## Cleaning things up with resets
+A "reset" is CSS we add to change default browser behaviour. 
+
+For example, you might see an irritating horizontal (and/or vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. When we set the `width` and `height` of an element to fill the viewport, this `margin` is added to the final size of the page (hence, a scroll bar).
+
+Below are two resets that most professional developers will use in every project.
 
 ### Sample code
 {:.no_toc}
@@ -208,15 +217,15 @@ body {
   <summary>Reset default `box-sizing`</summary>
 ```css
 * {
-  /* make element width calculations a little more intuitive */
+  /* make size calculations take 'padding' and 'border' into account */
   box-sizing: border-box;
 }
 ```
-**Optional**: `box-sizing` doesn't apply to the sample code as written but elements with `padding` might benefit from this handy reset.
+**Optional**: `box-sizing` doesn't apply to the sample code as written but elements with added `padding` and 'border' might benefit from this handy reset.
 {:.notice--info}
 </details>
 ## Mobile Considerations
-Sure, this illusion seems to work on the laptop but it doesn't look the best on mobile. Try adding a media query that declares the following when the viewport is in the portrait orientation:
+Sure, this illusion seems to work on the laptop but what if you want to text your codepen link to your mom? Try adding a media query that declares the following CSS when the viewport is in the portrait orientation:
 
 1. Place the circles vertically so one is above the other;
 2. Change the gradient line direction to run from top to bottom.
