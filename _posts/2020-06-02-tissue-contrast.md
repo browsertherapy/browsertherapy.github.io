@@ -225,7 +225,7 @@ body {
 {:.notice--info}
 </details>
 ## Mobile Considerations
-Sure, this illusion seems to work on the laptop but what if you want to text your codepen link to your mom? Try adding a media query that declares the following CSS when the viewport is in the portrait orientation:
+Sure, this illusion seems to work on the laptop but what if you want to text a link to your mom? Try adding a media query that declares the following CSS when the viewport is in the portrait orientation:
 
 1. Place the circles vertically so one is above the other;
 2. Change the gradient line direction to run from top to bottom.
