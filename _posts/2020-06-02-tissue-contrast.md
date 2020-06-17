@@ -135,7 +135,7 @@ These objectives are further broken down below. Remember: sample code is provide
 ## Objective 3: Overlap viewport with a semi-transparent image
 <figure style="width: 500px" class="align-center">
   <img src="{{ site.url }}{{ site.baseurl }}/assets/images/illusions/tissue-step-3.png" alt="Two grey patches">
-  <figcaption>Ovelapping a semi-transparent image over top of the background and circles greatly enhances the effect of the illusion.</figcaption>
+  <figcaption>Ovelapping a semi-transparent image over top of the viewport enhances the effect of the illusion.</figcaption>
 </figure> 
 
 ### Sample code
