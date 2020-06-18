@@ -14,6 +14,9 @@ The goal of this exercise is to replicate the Tissue Contrast Illusion in the br
 ## Prerequisites
 This activity should be approachable for beginners but some understanding of the following technologies will be beneficial: [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics){:target="_blank"}, [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics){:target="_blank"} and the [CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model){:target="_blank"}.
 
+**Sandbox environments**: [Codepen.io](https://www.codepen.io){:target="_blank"} is a handy tool (one of many) that helps you code directly in the browser.
+{:.notice--info}
+
 ## Topics covered
 The sample code (below) further incorporates the following concepts and technologies: [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/){:target="_blank"}, [viewport units](https://www.youtube.com/watch?v=_sgF8I-Q1Gs){:target="_blank"}, [linear gradients](https://css-tricks.com/css3-gradients/){:target="_blank"}, [transparent](https://css-tricks.com/almanac/properties/o/opacity/){:target="_blank"} [images](https://www.youtube.com/watch?v=33IinMVJf-M){:target="_blank"} and [absolute positioning](https://youtu.be/P6UgYq3J3Qs){:target="_blank"}.
 
