@@ -95,7 +95,7 @@ analytics:
 author:
   name             : "Tony Grimes"
   avatar           : "/assets/images/tonyg.jpg"
-  bio              : "Contract Instructor at SAIT"
+  bio              : "Adjunct Instructor at SAIT"
   location         : "Calgary, AB"
   email            :
   links:
@@ -183,7 +183,7 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 markdown: kramdown
 highlighter: rouge
 lsi: false
-excerpt_separator: "\n\n"
+excerpt_separator: "<!--more-->"
 incremental: false
 
 

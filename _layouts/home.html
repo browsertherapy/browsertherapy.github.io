@@ -3,7 +3,11 @@ layout: archive
 ---
 
 {{ content }}
+{% for post in site.tags.featured %}
+  {% include archive-single.html %}
+{% endfor %}
 
+{% comment %}
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
@@ -17,3 +21,5 @@ layout: archive
 {% endfor %}
 
 {% include paginator.html %}
+
+{% endcomment %}

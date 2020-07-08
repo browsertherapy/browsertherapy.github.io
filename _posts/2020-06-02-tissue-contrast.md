@@ -1,15 +1,17 @@
 ---
-title:  "Coding Challenge: Tissue Contrast Illusion"
-excerpt: "In this exercise, we will replicate the Tissue Contrast Illusion by Arthur Shapiro."
+title:  "Code Challenge: Tissue Contrast Illusion"
 toc: true
 categories: Challenges
 tags: featured
 ---
+The goal of this exercise is to replicate the Tissue Contrast Illusion in the browser. We've broken the problem into logical steps and provided (hidden) sample code if you get stuck. *But*, keep in mind there are many (and possibly better) ways to solve this problem.
+
+Test
+
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
 Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and-contrast){:target="_blank"}
 
-## Overview
-The goal of this exercise is to replicate the Tissue Contrast Illusion in the browser. We've broken the problem into logical steps and provided (hidden) sample code if you get stuck. *But*, keep in mind there are many (and possibly better) ways to solve this problem.
+<!--more-->
 
 ## Prerequisites
 This activity should be approachable for beginners but some understanding of the following technologies will be beneficial: [HTML basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics){:target="_blank"}, [CSS basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics){:target="_blank"} and the [CSS box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model){:target="_blank"}.
@@ -197,11 +199,14 @@ These objectives are further broken down below. Remember: sample code is provide
 </details>
 
 ## Cleaning things up with resets
-A "reset" is CSS we add to change default browser behaviour. 
+A "reset" is CSS we add to change default browser behaviour to either:
 
-For example, you might see an irritating horizontal (and/or vertical) scroll bar in your browser window. This is because most browsers add a default margin to their body tag. When we set the `width` and `height` of an element to fill the viewport, this `margin` is added to the final size of the page (hence, a scroll bar).
+1. make our projects more consistent across browsers, or 
+2. be lazy because we're tired of setting the same parameters for every project. 
 
-Below are two resets that most professional developers will use in every project.
+For example, you might currently see an irritating horizontal (and/or vertical) scroll bar in your browser window while working through this exercise. This is because most browsers add a default margin to their body tag. When we set the `width` and `height` of an element to fill the viewport, this `margin` is added to the final size of the page (hence, a scroll bar).
+
+Below are two resets that most professional developers will use in every project (there are many more).
 
 ### Sample code
 {:.no_toc}
@@ -227,6 +232,10 @@ body {
 **Optional**: `box-sizing` doesn't apply to the sample code as written but elements with added `padding` and `border` might benefit from this handy reset.
 {:.notice--info}
 </details>
+
+**Pro tip**: Many professional developers will use a reset library such as [normalize.css](https://necolas.github.io/normalize.css/) to ensure consistent results with their projects.
+{:.notice--info}
+
 ## Mobile Considerations
 Sure, this illusion seems to work on the laptop but what if you want to text a link to your mom? Try adding a media query that declares the following CSS when the viewport is in the portrait orientation:
 
