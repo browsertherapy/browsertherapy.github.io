@@ -6,8 +6,6 @@ tags: featured
 ---
 The goal of this exercise is to replicate the Tissue Contrast Illusion in the browser. We've broken the problem into logical steps and provided (hidden) sample code if you get stuck. *But*, keep in mind there are many (and possibly better) ways to solve this problem.
 
-Test
-
 {% include video id="9zMDmtWzBN8" provider="youtube" %}
 Source: [Curiosity Stream](https://curiositystream.com/video/1259/brightness-and-contrast){:target="_blank"}
 

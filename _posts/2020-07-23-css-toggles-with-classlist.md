@@ -12,7 +12,7 @@ Research into the following areas may help with this exercise.
 - [Introduction to Javascript events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 
 ## Objective
-The goal for this exercise is to control CSS styles using the `classList` Javascript API. It will allow us to toggle (i.e. flip back-and-forth) a CSS class of our choosing on an element (or more) of our choosing. By the time we're finished, you should have a page that looks similar to our demo:
+The goal for this exercise is to control CSS styles using the `classList` Javascript API. It will allow us to toggle (i.e. flip back-and-forth) a CSS class of our choosing on an element (or more) of our choosing. By the time we're finished, you should have a page that looks similar to this demo:
 
 <p class="codepen" data-height="446" data-theme-id="light" data-default-tab="result" data-user="browsertherapy" data-slug-hash="jOWdRze" style="height: 446px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Toggle with Element.classList.toggle()">
   <span>See the Pen <a href="https://codepen.io/browsertherapy/pen/jOWdRze">
@@ -105,10 +105,14 @@ const circle = document.querySelector('.circle');
 const button = document.querySelector('button');
 ```
 
+**Tool-time**: From here on in, you'll be relying on your browser's Web Console to troubleshoot Javascript issues. How to open the Web Console on [FireFox](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console){:target="_blank"} and [Chrome](https://developers.google.com/web/tools/chrome-devtools/console){:target="_blank"}.
+{:.notice--info}
+
 **Bug hunt**: If you see an error like `button is not defined` or similar, chances are there's a problem with the selector you're passing to `querySelector()`.
 {: .notice--warning}
 
 ## Objective 3: Add a `click` handler for our `button` using `addEventListener()`
+Now that we have a button variable, let's do something with it. Javascript is [all about events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events) like clicks/touches, mouse/finger movement, form submission, etc. We can tell the browser to run code when a particular event happens, like the click of our button. We use the `addEventListener()` method (all HTML elements have one) to attach a `click handler` to our button.
 
 ```js
 button.addEventListener('click', function(){
@@ -118,10 +122,14 @@ button.addEventListener('click', function(){
 });
 ```
 
+**Event reference**: Bored of clicks? There's a list of all available events in the [MDN Event Reference](https://developer.mozilla.org/en-US/docs/Web/Events){:target="_blank"}.
+{:.notice--info}
+
 ## Objective 4: Toggle a CSS class with `element.classList.toggle()`
+When you add a list of classes to an HTML element (using the `class` attribute), the browser stores them in a list in memory. Normally, we add classes by typing some HTML but we can also use a useful Javascript API called `classList`. It allows us to add, remove, toggle and replace class names programmatically.
 
 **More about classList**: The MDN [documentation on `element.classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) is a little sparse but a quick skim of the example code will give you a good idea of what it does: it adds/removes/toggles/replaces the class names of HTML elements. Very handy!
-{: .notice}
+{: .notice--info}
 
 ```js
 button.addEventListener('click', function(){
@@ -131,6 +139,9 @@ button.addEventListener('click', function(){
   
 });
 ```
+
+**What's the point?** If you're looking for a real work application for a CSS toggle, look no further than the mighty [hamburger menu](https://www.google.com/search?q=css+hamburger+menus)!
+{: .notice--info}
 
 ## Cleaning up our code: Making things pretty(ish)
 Functionality isn't everything. Browser default `button` styling suucks, so let's make it more "buttony" (technical web development term).
