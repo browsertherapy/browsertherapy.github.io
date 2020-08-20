@@ -12,7 +12,7 @@ Research into the following areas may help with this exercise.
 - [Javascript variables](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables)
 - [Introduction to Javascript events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)
 
-## Objective
+## Exercise Objective
 The goal for this exercise is to control page presentation using CSS Variables. We will create a slider that will change the hue of multiple colors with one CSS variable. By the time we're finished, you should have a page that looks similar to this demo:
 
 <p class="codepen" data-height="450" data-theme-id="dark" data-default-tab="result" data-user="browsertherapy" data-slug-hash="dyMGgaV" style="height: 450px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Colour Slider with CSS Variables and HSL">
@@ -128,7 +128,7 @@ button.addEventListener('input', function(){
 });
 ```
 
-## Cleaning up our code: Making things pretty(ish)
+## Making things pretty(ish)
 Functionality isn't everything. The following code will centre our elements in the middle of the viewport
 
 ```css
