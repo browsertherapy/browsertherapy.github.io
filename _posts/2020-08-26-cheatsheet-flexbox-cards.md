@@ -16,7 +16,7 @@ Additionally, CSS Tricks has excellent resources:
 
 And these learning games will help you put code to screen:
 - [Flexbox Froggy](https://flexboxfroggy.com/)
-- [Flexbox Ninja](https://mastery.games/flexboxzombies/)
+- [Flexbox Zombies](https://mastery.games/flexboxzombies/)
 
 ## Card Pattern
 A quick search for "[ux card pattern](https://www.google.com/search?q=ux+card+pattern)" will give you countless articles/videos to get you up to speed on the card pattern (a popular use for flexbox).
