@@ -45,6 +45,14 @@ The [Flexbox Patterns](https://www.flexboxpatterns.com) website has many useful 
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+### Tony's Sample Code: Flex grow, shrink and basis
+<p class="codepen" data-height="400" data-theme-id="dark" data-default-tab="css,result" data-user="browsertherapy" data-slug-hash="YzqrvvV" style="height: 400px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox demo: grow, shrink and basis">
+  <span>See the Pen <a href="https://codepen.io/browsertherapy/pen/YzqrvvV">
+  Flexbox demo: grow, shrink and basis</a> by Tony Grimes (<a href="https://codepen.io/browsertherapy">@browsertherapy</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Popular Tutorials
 Kevin Powell has many great tutorials on Flexbox, these are just two you should check out:
 - Playlist: [Flexbox Basics](https://www.youtube.com/watch?v=hwbqquXww-U&list=PL4-IK0AVhVjMSb9c06AjRlTpvxL3otpUd)
