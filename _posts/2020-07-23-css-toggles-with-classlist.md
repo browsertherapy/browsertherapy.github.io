@@ -164,7 +164,7 @@ button {
 ```
 
 ## Fly high, Icarus
-Now that you've got a basic understanding of how CSS toggles work, try adding two to the [Tissue Contrast Illusion exercise](http://localhost:4000/challenges/tissue-contrast/): one to toggle `.split-bg` and another to hide/show the transparent image (hint: this might call for a new class named `.hidden`).
+Now that you've got a basic understanding of how CSS toggles work, try adding two to the [Tissue Contrast Illusion exercise](http://browsertherapy.com/challenges/tissue-contrast/): one to toggle `.split-bg` and another to hide/show the transparent image (hint: this might call for a new class named `.hidden`).
 
 Good luck!
 
