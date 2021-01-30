@@ -1,6 +1,6 @@
 ---
 title: "Cloning a read-only repo"
-layout: page
+layout: default
 ---
 
 The materials for this course are all stored as public repos that you can clone onto your system. These are meant to be for reference in support of each day's lesson. It is not expected that you will be altering these files.

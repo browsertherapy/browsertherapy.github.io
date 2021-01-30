@@ -1,6 +1,6 @@
 ---
 title: "Creating Git (and GitHub) Repositories"
-layout: page
+layout: default
 ---
 This page has been separated into dedicated cheatsheets.
 

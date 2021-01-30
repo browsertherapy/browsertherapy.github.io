@@ -1,6 +1,6 @@
 ---
 title: "Commiting changes to a local repo"
-layout: page
+layout: default
 ---
 ## Prerequisites 
 - [Local repo initialized]({{site.baseurl}}/cheatsheets/git-gh/init-local)

@@ -1,6 +1,6 @@
 ---
 title: "Git and GitHub"
-layout: page
+layout: default
 ---
 
 ## Prerequisites 

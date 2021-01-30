@@ -1,6 +1,6 @@
 ---
 title: "Initializing a new local repo"
-layout: page
+layout: default
 ---
 
 ## Terminology

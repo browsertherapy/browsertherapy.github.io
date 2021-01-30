@@ -1,6 +1,6 @@
 ---
 title: Command Line Cheatsheet
-layout: page
+layout: default
 ---
 
 ## Terms

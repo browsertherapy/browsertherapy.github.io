@@ -1,6 +1,6 @@
 ---
 title: "Creating and syncing a remote repo"
-layout: page
+layout: default
 ---
 
 ### Terms

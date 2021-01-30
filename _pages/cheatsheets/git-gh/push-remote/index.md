@@ -1,6 +1,6 @@
 ---
 title: "Push commits to a remote repo"
-layout: page
+layout: default
 ---
 
 ## Dev Life
