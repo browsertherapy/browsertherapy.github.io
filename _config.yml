@@ -145,7 +145,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - cheatsheets
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
